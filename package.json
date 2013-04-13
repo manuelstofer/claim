@@ -1,0 +1,15 @@
+{
+    "name": "claim",
+    "version": "0.0.1",
+    "author": "Manuel Stofer <manuel@takimata.ch>",
+    "license": "MIT",
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*",
+        "component": "*",
+        "mocha-phantomjs": "*"
+    },
+    "scripts": {
+        "test": "make test"
+    }
+}

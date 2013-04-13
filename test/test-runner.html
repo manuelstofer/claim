@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title> Tests </title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+</head>
+<body>
+<div id="mocha"></div>
+
+<div class="a1">
+    <div>
+        <div class="a1-1">
+            <div class="a-1-1"></div>
+        </div>
+        <div class="a1-2">
+            <div class="a1-2-1"></div>
+            <div class="a1-2-2"></div>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/mocha/mocha.js"></script>
+<script src="../node_modules/chai/chai.js"></script>
+<script src="../build/build.js"></script>
+<script>
+    mocha.ui('bdd');
+    mocha.reporter('html');
+    chai.should();
+</script>
+<script src="test.js"></script>
+<script>
+    if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
+    else { mocha.run(); }
+</script>
+</body>
+</html>

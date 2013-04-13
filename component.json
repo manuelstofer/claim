@@ -1,0 +1,12 @@
+{
+    "name": "claim",
+    "description": "util to check if dom elements belong to a view or sub view",
+    "version": "0.0.1",
+    "keywords": [],
+    "dependencies": {},
+    "development": {},
+    "license": "MIT",
+    "scripts": [
+        "index.js"
+    ]
+}

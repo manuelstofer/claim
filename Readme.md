@@ -1,5 +1,7 @@
 # claim
 
+[![Build Status](https://travis-ci.org/manuelstofer/claim.png)](https://travis-ci.org/manuelstofer/claim)
+
 Util to check if dom elements belong to a view or sub view.
 
 This is useful in nested views to filter .querySelector[All]

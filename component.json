@@ -1,6 +1,6 @@
 {
     "name": "claim",
-    "description": "util to check if dom elements belong to a view or sub view",
+    "description": "Util to check if dom elements belong to a view or sub view",
     "version": "0.0.1",
     "keywords": [],
     "dependencies": {},

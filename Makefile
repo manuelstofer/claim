@@ -6,7 +6,7 @@ install:
 	@npm install
 	@component install
 
-test: install
+test: build
 	@echo test in browser
 	@./node_modules/mocha-phantomjs/bin/mocha-phantomjs test/test-runner.html
 

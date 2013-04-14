@@ -1,27 +1,26 @@
-var claimId = 0;
-
 module.exports = claim
 
-function claim (claimedNode) {
-    var id = claimedNode.claimId = ++claimId;
+function claim (claimedNode, claimRoot) {
 
-
-    function belongsTo (node) {
-        var root = getRoot(node);
-        return !!(root && root.claimId === id);
-    }
-
-    function release () {
-        delete claimedNode.claimId;
-    }
-
-    function getRoot (el) {
-        while (el && el.parentNode && typeof el.claimId === 'undefined') {
-            el = el.parentNode;
-        }
-        return el;
-    }
+    claimedNode.isClaimed = claimRoot === false ? 'children' : 'node';
 
     belongsTo.release = release;
     return belongsTo;
+
+    function belongsTo (node) {
+        var root = getRoot(node);
+        return !!(root && root === claimedNode);
+    }
+
+    function release () {
+        delete claimedNode.isClaimed;
+    }
+
+    function getRoot (node) {
+        if (node.isClaimed === 'node') return node;
+        do {
+            node = node.parentNode;
+        } while (node && !node.isClaimed);
+        return node;
+    }
 }

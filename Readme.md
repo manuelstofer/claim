@@ -4,10 +4,11 @@
 
 Util to check if dom elements belong to a view or sub view.
 
-This is useful in nested views to filter .querySelector[All]
-to nodes that belong to the view and are not inside a sub view.
+This is useful in nested views to exclude results from .querySelector[All]
+that belong to a sub view.
 
-It assumes that sub views claim their root element as well.
+
+It assumes that sub views claim their root elements.
 
 ## Installation
 
